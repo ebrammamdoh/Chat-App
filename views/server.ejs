@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="./server-style.css">
+    <title>Server</title>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-body">
+                    <%for(let i=0;i < clients.length;i++){%>
+                        <ul id="clientsLst">
+                            <li><%=clients[i].id%></li>
+                        </ul>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <div>
+                            <ul id="messages"></ul>
+                        </div>
+                        <div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" placeholder="message">
+                            </div>
+                            <div class="col-md-2">
+                                <button id="btn" class="btn btn-primary">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="./server-index.js"></script>
+</body>
+</html>

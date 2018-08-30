@@ -1,0 +1,11 @@
+li{
+    background-color: aquamarine;
+    color: darkblue;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+li:hover{
+    background-color: cadetblue;
+    color: crimson;
+}
